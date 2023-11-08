@@ -1,0 +1,92 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(/src/deva-williamson-S2jw81lfrG0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: flex;
+  font-weight: lighter;
+}
+
+.cards {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #000;
+  font-size: 120px;
+  text-align: justify;
+  font-family: Ms Madi;
+}
+
+.mail {
+  width: 100%;
+  text-align: end;
+  padding-right: 220px;
+
+  color: #bda1a0;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mail:hover {
+  color: #ff7a8d;
+  transition: 0.3s;
+}
+.right {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.form {
+  font-weight: lighter;
+  margin: 100px;
+
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(22.5px);
+  border: 1px solid #11111129;
+  padding: 20px 35px;
+  width: 40vw;
+}
+
+input {
+  height: 35px;
+  width: 100%;
+  margin-left: 10px;
+  margin: 15px 0;
+  padding: 0 10px;
+  border-radius: 30px;
+  border: none;
+  background: #d9d9d9;
+}
+
+textarea {
+  height: 110px;
+  width: 100%;
+  margin-left: 10px;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #d9d9d9;
+}
