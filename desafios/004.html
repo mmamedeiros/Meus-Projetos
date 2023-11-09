@@ -61,28 +61,34 @@
     </style>
 
     <style>
-        input{
-            width: 50%;
-            height: 40px;
+        .areaProduto{
+            width: 100%;
+            display: flex;
+            margin: 10px;
+        }
 
-            margin: 15px;
-            padding: 5px;
-            border: 1px solid #111;
-            border-radius: 15px;
+        img{
+            margin: 10px;
+        }
 
-            font-size: 16px;
+        .areaCompra{
+            width: 40%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         button{
             width: 50%;
-            height: 60px;
+            height: 50px;
 
             margin: 15px;
             padding: 5px;
             border: none;
             background: rgba(98, 41, 204, 0.986);
             border-radius: 15px;
-            box-shadow: 1px 1px  1px 1px #111;
+            box-shadow: 0.1px 0.1px  0.1px 0.1px #111;
             border-bottom: #000000 solid;
             border-right: #000000 solid;
 
@@ -90,53 +96,70 @@
             font-weight: 600;
             font-size: 16px;
         }
-
-        div{
-            font-size:  26px;
-        }
     </style>
 </head>
 <body>
-    <h1> ANTES E DEPOIS</h1>
+    <h1>TONINHO PERIFÉRICOS</h1>
     <main>
-        <h2>Digite um Numero</h2>
-        <input type="number" id="number">
-        <button onclick="btn()">Mostrar</button>
+
+        <div class="areaProduto">
+
+            <img src="/desafios/src/mouseGamer.webp" alt="">
+            
+            <section class="infos">
+
+                <h3 for="" id="mouse">Mouse Gamer Wireless</h3>
+                <p>Mouse ultra tecnológico com luizinhas para aumentra seu Fps nos Games!! <br>
+                <strong>R$ 30,99</strong></p>
+
+            </section>
+
+            <section class="areaCompra">
+                <button  onclick="mouse()">Comprar</button>
+            </section>
+        </div>
+
+        <div class="areaProduto">
+
+            <img src="/desafios/src/tecladoGamer.webp" alt="">
+            
+            <section class="infos">
+
+                <h3 for="" id="teclado">Teclado Gamer Wireless</h3>
+                <p>Teclado ultra tecnológico com luizinhas para aumentra seu Fps nos Games!! <br>
+                <strong>R$ 65,99</strong></p>
+
+            </section>
+
+            <section class="areaCompra">
+                <button onclick="teclado()">Comprar</button>
+            </section>
+        </div>
     </main>
     <footer>@projetosMatheus</footer>
 
     <script>
-            let div = document.createElement("div")
-            let main = document.querySelector("main")
+      let produto = "";
+      let pagamento;
 
+  
+      function mouse(){
+        produto = "mouse";
+        showValues();
+      }
+      function teclado(){
+        produto = "teclado";
+        showValues();
+      }
 
-        let number = document.querySelector("#number")
-        number.addEventListener('keypress', function(event) {
-            showValue()
-        });
-
-        function btn(){
-           
-            let firstNumber = parseInt(number.value); // Converte para um número inteiro
-
-            div.innerHTML = `${firstNumber-1} < ${firstNumber} > ${firstNumber+1} `
-
-            main.appendChild(div)
-
+      function showValues(){
+        if(produto == "mouse"){
+            alert('produto custa R$30,99')
+        }else{
+            alert('produto custa R$65,99')
+            pagamento = window.prompt("Digite o valor do pagamento")
         }
-
-        function showValue(){
-            if (event.key === 'Enter') {
-                
-                let firstNumber = parseInt(number.value); // Converte para um número inteiro
-
-                div.innerHTML = `${firstNumber-1} < ${firstNumber} > ${firstNumber+1} `
-
-                main.appendChild(div)
-            
-            }
-        }
-
+      }
 
     </script>
 </body>
