@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+            background-size: 300% 250%;
+        }
+
+        h1{
+            color: #fff;
+            font-size: 50px;
+            font-weight: 900;
+
+        }
+
+        main{
+            width: 50vw;
+            height: 60vh;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            margin: 15px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 9px 9px  1px 1px #111;
+            border-bottom: #000000 solid;
+            border-right: #000000 solid;
+        }
+
+        footer{
+            font-size: 16px;
+            font-weight: 200;
+            color:  rgba(252,176,69,1) ;
+        }
+
+        #dados{
+            height: 80%;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+
+        }
+
+        button{
+            width: 50%;
+            height: 60px;
+
+            margin: 15px;
+            padding: 5px;
+            border: none;
+            background: rgba(98, 41, 204, 0.986);
+            border-radius: 15px;
+            box-shadow: 1px 1px  1px 1px #111;
+            border-bottom: #000000 solid;
+            border-right: #000000 solid;
+
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        #nome{
+            width: 50%;
+            height: 40px;
+
+            margin: 15px;
+            padding: 5px;
+            border: 1px solid #111;
+            border-radius: 15px;
+
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mensagem de Bem-Vindo</h1>
+    <main>
+        <h2>Seja bem-vindo ao nosso site</h2>
+        <button onclick="coleta()" id="btnColeta">faça seu cadastro</button>
+        
+    </main>
+    <footer>@projetosMatheus</footer>
+
+   
+
+    <script>
+          let main = document.querySelector("main")
+        function coleta(){
+            let btn = document.querySelector("#btnColeta")
+            btn.style.display = "none"
+            let div = document.createElement("div")
+            div.id = "dados"
+            div.innerHTML = `
+            <label for="">Nome: </label><input type="text"  id="nome"><br>
+    <button onclick="mensagem()">Enviar</button>`
+           
+          
+            main.appendChild(div)
+
+        }
+
+        function mensagem() {
+            let nome = document.querySelector("#nome")
+
+            if(nome.value == 0){
+                alert("digite um nome")
+            }else{
+                let dados = document.querySelector("#dados")
+                dados.style.display = "none"
+
+                let mensagem = document.createElement("div")
+                
+                mensagem.innerHTML = `Olá ${nome.value}, tudo bem?`
+                main.appendChild(mensagem)
+            }
+        }
+    </script>
+</body>
+</html>

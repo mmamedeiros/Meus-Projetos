@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+            background-size: 300% 250%;
+        }
+
+        h1{
+            color: #fff;
+            font-size: 50px;
+            font-weight: 900;
+
+        }
+
+        main{
+            width: 50vw;
+            height: 60vh;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            margin: 15px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 9px 9px  1px 1px #111;
+            border-bottom: #000000 solid;
+            border-right: #000000 solid;
+        }
+
+        footer{
+            font-size: 16px;
+            font-weight: 200;
+            color:  rgba(252,176,69,1) ;
+        }
+
+        button{
+            width: 50%;
+            height: 60px;
+
+            margin: 15px;
+            padding: 5px;
+            border: none;
+            background: rgba(98, 41, 204, 0.986);
+            border-radius: 15px;
+            box-shadow: 1px 1px  1px 1px #111;
+            border-bottom: #000000 solid;
+            border-right: #000000 solid;
+
+            color: #fff;
+            font-weight: 600;
+            font-size: 24px;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Botões</h1>
+    <main>
+        <button class="bt1">Botão 1</button>
+        <button class="bt2">Botão 2</button>
+        <button class="bt3">Botão 3</button>
+    </main>
+    <footer>@projetosMatheus</footer>
+
+    <script>
+        let btn1 = document.querySelector(".bt1").addEventListener("click", () =>{
+            alert("botão 1")
+        });
+        let btn2 = document.querySelector(".bt2").addEventListener("click", () =>{
+            alert("botão 2")
+        });
+        let btn3 = document.querySelector(".bt3").addEventListener("click", () =>{
+            alert("botão 3")
+        });
+
+    </script>
+</body>
+</html>
