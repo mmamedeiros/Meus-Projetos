@@ -1,10 +1,10 @@
-# Meus-Projetos
- Colocando todos os meus projetos atuais
+# TODOS MEUS PROJETOS DA FACULDADE
 
- 11/08/2023 
-    - Aproveitando os conhecimentos de como trabalhar com os meus repositóros, coloquei meus principais projetos aqui para poder modifica-los na faculdade e no trabalho 
-    - Fiz o questinário funcionar perfeitamente:
-        - todos os erros foram na escrita, errava na hora de escrever os nomes de variaveis ou te comandos mesmo
-        - se atentar a esses dados
-        -codar e falar oque está fazendo para não errar mais nisso 
+1° Projeto - Jack&Bolos
+    Meu primeiro site com interação a um banco de Dados, a base do projeto é uma confeitaria especializada em Bolos personalizados e que para expandir mais os négios poderá usar do site para organizar todos os pedidos recebidos.
+    Usei o  MySql, JavaScript, HTML, CSS e Jsp para construção da aplicação alpém do figma para fazer o protótipo
 
+    Aprendizados:
+    - Eu já tinha conhecimentos sonbre DOM, mas com este projeto começei a usar ele de forma real trazendo uma melhor responsividade e features novas para o site 
+    - Melhorei minha forma de escrever códigos, trazendo mais clareza aos comando 
+    -Evolui meu inglês
