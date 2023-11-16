@@ -56,7 +56,7 @@
 
         <div class="bolo">
           <label for="saborBolo">Sabor do Bolo:</label>
-          <select name="sabores" class="sabores">
+          <select name="sabores" class="sabores" class="dadosObrigatorios">
             <option name="" class="sabor"></option>
             <option name="chocolate" class="sabor">chocolate</option>
             <option name="morango" class="sabor">morango</option>
@@ -65,16 +65,16 @@
           ><br />
 
           <label for="boloKg">Peso(Kg):</label>
-          <input type="number" value="kg" /><br />
+          <input type="number" value="kg" class="dadosObrigatorios"/><br />
 
           <label for="pessoasQuant">Quantidade de pessoas:</label>
           <input type="number" value="pessoas" /> <br />
 
           <label for="andaresQuant">Quantidade de andares:</label>
-          <input type="number" value="andares" /> <br />
+          <input type="number" value="andares" class="dadosObrigatorios"/> <br />
 
           <label for="tema">Descreva seu Bolo:</label> <br />
-          <textarea style="resize: none" rows="5"></textarea>
+          <textarea style="resize: none" rows="5" class="dadosObrigatorios"> </textarea>
         </div>
 
         <div class="doces">
@@ -141,18 +141,16 @@
       let btn = document.querySelector(".btn");
       btn.addEventListener("click", () => {
         let dados = document.querySelector(".dadosObrigatorios").value;
-        let error = document.querySelector(".error");
+
 
         if (dados.length == 0) {
-          dados.style.background = "red";
+          alert('dado Obrigatório não preenchido')
         } else {
-          location.href = "/pages/final.html";
+          location.href = "Web2.1/pages/final.html";
         }
       });
 
-      function submit() {
-        window.location.href = '/Web2.1/pages/contatos.html';
-      }
+
     </script>
   </body>
 </html>
