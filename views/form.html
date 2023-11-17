@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu pedido</title>
+    <link rel="stylesheet" href="/public/style/base.css">
+    <link rel="stylesheet" href="/public/style/form.css"></head>
+<body>
+    <header>
+        <nav>
+          <img src="/public/src/logotipo jack bolos & cia.png" alt="" id="logoTipo" />
+  
+          <ul class="navBar">
+            <li class="navItem">
+              <a href="/views/intro.html" class="navLink">Home</a>
+            </li>
+  
+            <li class="navItem">
+              <a href="/views/contatos.html" class="navLink">Contatos</a>
+            </li>
+          </ul>
+  
+          <p id="cont">11 96018-6369</p>
+        </nav>
+      </header>
+
+      
+    <form id="form">
+        <h2>Formulário de pedido</h2>
+  
+        <section class="cliente">
+          <h3>dados do Cliente</h3>
+  
+          <div class="dadosCl">
+            Nome: <br>
+            <input type="text" name="txtname" placeholder="digite seu nome" class="require" oninput="nameValidate()"> <br>
+            <span class="span-require">minimo de 3 caracteres</span><br>
+
+            Telefone: <br>
+            <input id="tell" type="number" name="txtTell" placeholder="(11) xxxx-xxxx" class="require" oninput="tellValidate()"> <br>
+            <span class="span-require">digite um telefone válido</span> <br>
+
+            E-mail: <br>
+            <input type="email" name="txtmail" placeholder="seu@email.com" class="require" oninput="emailValidade()"> <br>
+            <span class="span-require">digite um e-mail válido</span> <br>
+
+            Endereço: <br>
+            <input type="text" name="txtEndereco" placeholder="digite seu endereço" class="require" oninput="adressValidate()"> <br>
+            <span class="span-require">digite seu endereço</span>
+
+        </section>
+  
+        <section class="pedido">
+          <h3>Pedido</h3>
+  
+          <div class="bolo">
+            <label for="saborBolo">Sabor do Bolo:</label>
+            <select name="sabores" class="sabores" class="dadosObrigatorios">
+              <option name="" class="sabor"></option>
+              <option name="chocolate" class="sabor">chocolate</option>
+              <option name="morango" class="sabor">morango</option>
+              <option name="brigadeiro" class="sabor">brigadeiro</option>
+              <option name="leiteNinho" class="sabor">leite ninho</option></select
+            ><br />
+  
+            <label for="boloKg">Peso(Kg):</label>
+            <input type="number" value="kg" class="dadosObrigatorios"/><br />
+  
+            <label for="pessoasQuant">Quantidade de pessoas:</label>
+            <input type="number" value="pessoas" /> <br />
+  
+            <label for="andaresQuant">Quantidade de andares:</label>
+            <input type="number" value="andares" class="dadosObrigatorios"/> <br />
+  
+            <label for="tema">Descreva seu Bolo:</label> <br />
+            <textarea style="resize: none" rows="5" class="dadosObrigatorios"> </textarea>
+          </div>
+  
+          <div class="doces">
+            <label for="descisao">Você quer algum doce?</label><br />
+            <div class="opt">
+              <input
+                type="radio"
+                class="opt"
+                id="sim"
+                name="descisao"
+                value="sim"
+              />
+              <label for="sim">Sim</label><br />
+              <input
+                type="radio"
+                class="opt"
+                id="não"
+                name="descisao"
+                value="não"
+              />
+              <label for="não">Não</label>
+            </div>
+  
+            <div class="querDoce" style="display: none">
+              <label for="saborDoce">Sabor do doce</label>
+              <select name="sabores" class="sabores">
+                <option name="" class="sabor"></option>
+                <option name="chocolate" class="sabor">chocolate</option>
+                <option name="morango" class="sabor">morango</option>
+                <option name="brigadeiro" class="sabor">brigadeiro</option>
+                <option name="leiteNinho" class="sabor">
+                  leite ninho
+                </option></select
+              ><br />
+  
+              <label for="doceQuant">Quantidade de doce:</label>
+              <input type="number" value="doces" /> <br />
+            </div>
+          </div>
+        </section>
+  
+        <div class="btn">
+          <input type="submit" value="Enivar" onsubmit="submit()">
+        </div>
+      </form>
+  
+      <script src="/public/scripts/validacao.js"></script>
+
+</body>
+</html>
